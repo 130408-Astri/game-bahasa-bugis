@@ -1,0 +1,114 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to left, #F7CFD8, #F4F8D3);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #ab4444;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #740e0e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.learning-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.learning-item {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.learning-item img {
+  width: 100%;
+  height: auto;
+}
+
+.item-content {
+  padding: 1rem;
+}
+
+.item-content h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.item-content p {
+  color: #7f8c8d;
+}
+
+@media (min-width: 600px) {
+  .learning-items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ... (kode sebelumnya tetap) ... */
+
+.search-add-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.learning-item.focused {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  background: white;
+  z-index: 1001;
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: zoom-out;
+}
+
+body.focus-mode::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+

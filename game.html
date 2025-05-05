@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Gambar Basa Ugi'</title>
+    <link rel="stylesheet" href="styles/game.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="score">Skor: <span id="score">0</span></div>
+            <div class="timer">Waktu: <span id="timer">10</span>s</div>
+            <div class="question-number">Pertanyaan: <span id="current-question">1</span>/20</div>
+        </div>
+        
+        <div class="game-content">
+            <div class="image-container">
+                <img id="question-image" src="" alt="Gambar pertanyaan">
+            </div>
+            
+            <div class="options-container" id="options-container">
+            </div>
+            
+            <div class="description-container" id="description-container">
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-over-container" id="game-over-container">
+        <h2>Game Selesai!</h2>
+        <p>Skor akhir Anda: <span id="final-score">0</span></p>
+        <button id="play-again-btn">Main Lagi</button>
+        <a href="index.html" class="btn home-btn">Ke Home</a>
+    </div>
+    
+    <script src="scripts/game.js"></script>
+</body>
+</html>
